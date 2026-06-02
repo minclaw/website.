@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Muhammed Emin Bekereci | CV</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --white: #ffffff;
+      --dark: #0f172a;
+      --text: #334155;
+      --muted: #64748b;
+      --blue: #2563eb;
+      --blue-dark: #1d4ed8;
+      --soft-blue: #eef5ff;
+      --border: #e2e8f0;
+      --shadow: 0 10px 28px rgba(15, 23, 42, 0.07);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Inter", sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    header {
+      background: rgba(255,255,255,0.96);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 4px 18px rgba(15, 23, 42, 0.04);
+    }
+
+    .navbar {
+      width: min(1120px, calc(100% - 32px));
+      margin: auto;
+      padding: 18px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .brand h1 {
+      color: var(--dark);
+      font-size: 20px;
+      font-weight: 800;
+      line-height: 1.2;
+    }
+
+    .brand p {
+      color: var(--blue);
+      font-size: 14px;
+      font-weight: 600;
+      margin-top: 2px;
+    }
+
+    nav {
+      display: flex;
+      gap: 22px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    nav a {
+      color: var(--dark);
+      font-size: 14px;
+      font-weight: 600;
+      transition: 0.2s;
+    }
+
+    nav a:hover {
+      color: var(--blue);
+    }
+
+    .hero {
+      width: min(1120px, calc(100% - 32px));
+      margin: 40px auto 0;
+      padding: 58px 34px;
+      display: grid;
+      grid-template-columns: 0.82fr 1.18fr;
+      align-items: center;
+      gap: 54px;
+    }
+
+    .photo-area {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      order: 1;
+    }
+
+    .hero-content {
+      order: 2;
+    }
+
+    .photo-frame {
+      width: 245px;
+      height: 245px;
+      border-radius: 50%;
+      padding: 8px;
+      background: var(--white);
+      box-shadow: 0 16px 38px rgba(15, 23, 42, 0.13);
+      border: 1px solid var(--border);
+      flex: 0 0 auto;
+    }
+
+    .photo-frame img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .hello {
+      color: var(--blue);
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .hero h2 {
+      color: var(--dark);
+      font-size: clamp(38px, 5vw, 58px);
+      line-height: 1.08;
+      letter-spacing: -1.2px;
+      margin-bottom: 18px;
+      font-weight: 800;
+    }
+
+    .hero h2 span {
+      color: var(--blue);
+    }
+
+    .line {
+      width: 48px;
+      height: 4px;
+      background: var(--blue);
+      border-radius: 999px;
+      margin-bottom: 24px;
+    }
+
+    .hero p {
+      max-width: 590px;
+      color: var(--text);
+      font-size: 17px;
+      margin-bottom: 26px;
+    }
+
+    .socials {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .socials a {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 17px;
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--dark);
+      box-shadow: 0 8px 18px rgba(15, 23, 42, 0.06);
+      transition: 0.2s;
+    }
+
+    .socials a:hover {
+      color: var(--blue);
+      border-color: #bfdbfe;
+      transform: translateY(-2px);
+    }
+
+    main {
+      width: min(1120px, calc(100% - 32px));
+      margin: 20px auto 0;
+    }
+
+    section {
+      padding-top: 34px;
+    }
+
+    .section-title {
+      color: var(--dark);
+      font-size: 26px;
+      font-weight: 800;
+      margin-bottom: 20px;
+      letter-spacing: -0.4px;
+    }
+
+    .section-title::after {
+      content: "";
+      display: block;
+      width: 42px;
+      height: 4px;
+      background: var(--blue);
+      border-radius: 999px;
+      margin-top: 6px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .card h3 {
+      color: var(--dark);
+      font-size: 19px;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: var(--text);
+      font-size: 15px;
+    }
+
+    ul {
+      margin-top: 10px;
+      padding-left: 19px;
+    }
+
+    li {
+      color: var(--text);
+      font-size: 15px;
+      margin-bottom: 8px;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-top: 14px;
+    }
+
+    .tag {
+      background: var(--soft-blue);
+      color: var(--blue-dark);
+      border: 1px solid #bfdbfe;
+      padding: 7px 11px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .experience-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 10px 0 12px;
+    }
+
+    .pill {
+      background: #f1f5f9;
+      color: #475569;
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .project {
+      padding: 15px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .project:first-child {
+      padding-top: 0;
+    }
+
+    .project:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .contact-item {
+      color: var(--text);
+      font-size: 15px;
+      font-weight: 500;
+    }
+
+    .contact-item strong {
+      color: var(--dark);
+      font-weight: 800;
+    }
+
+    footer {
+      margin-top: 48px;
+      background: var(--dark);
+      color: #cbd5e1;
+      text-align: center;
+      padding: 24px 18px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 900px) {
+      .navbar {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      nav {
+        gap: 14px;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 34px 0 20px;
+        gap: 28px;
+      }
+
+      .photo-area {
+        order: 1;
+      }
+
+      .hero-content {
+        order: 2;
+      }
+
+      .line {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero p {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .socials {
+        justify-content: center;
+      }
+
+      .photo-frame {
+        width: 205px;
+        height: 205px;
+      }
+
+      .grid-2,
+      .grid-3 {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .brand h1 {
+        font-size: 18px;
+      }
+
+      .brand p {
+        font-size: 13px;
+      }
+
+      nav a {
+        font-size: 13px;
+      }
+
+      .hero h2 {
+        font-size: 36px;
+      }
+
+      .hero p {
+        font-size: 15px;
+      }
+
+      .photo-frame {
+        width: 185px;
+        height: 185px;
+      }
+
+      .socials a {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="navbar">
+      <div class="brand">
+        <h1>Muhammed Emin Bekereci</h1>
+        <p>E-Ticaret & Dijital Pazarlama</p>
+      </div>
+
+      <nav>
+        <a href="#hakkimda">Hakkımda</a>
+        <a href="#beceriler">Beceriler</a>
+        <a href="#deneyim">Deneyim</a>
+        <a href="#projeler">Projeler</a>
+        <a href="#iletisim">İletişim</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="photo-area">
+      <div class="photo-frame">
+        <img src="profil.jpg" alt="Muhammed Emin Bekereci Profil Fotoğrafı">
+      </div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hello">Merhaba, ben</div>
+      <h2>Muhammed Emin <span>Bekereci</span></h2>
+      <div class="line"></div>
+      <p>
+        Teknoloji, veri yönetimi, dijital pazarlama ve ölçeklenebilir e-ticaret
+        sistemleri üzerine kendimi geliştiriyorum.
+      </p>
+
+      <div class="socials">
+        <a href="https://www.linkedin.com/in/emin-bekereci" target="_blank">LinkedIn</a>
+        <a href="https://github.com/minclaw" target="_blank">GitHub</a>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=eminbekereci46@gmail.com" target="_blank">E-posta</a>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <section id="hakkimda">
+      <div class="grid-2">
+        <div class="card">
+          <h3>Hakkımda</h3>
+          <p>
+            Yönetim Bilişim Sistemleri 3. sınıf öğrencisiyim. Teknoloji, veri yönetimi
+            ve e-ticaret sistemleri üzerine yoğunlaşmaktayım.
+          </p>
+          <br>
+          <p>
+            Kurucusu olduğum dijital markayı 1,5 yıl boyunca stoksuz e-ticaret modeliyle yönettim.
+            Bu süreçte satış stratejisi geliştirme, müşteri deneyimi yönetimi, operasyon takibi
+            ve temel veri analizi alanlarında uygulamalı deneyim kazandım.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Eğitim</h3>
+          <p><strong>İskenderun Teknik Üniversitesi</strong></p>
+          <p>Yönetim Bilişim Sistemleri - Lisans</p>
+          <p>2023 - Devam Ediyor</p>
+          <div class="tag-list">
+            <span class="tag">YBS</span>
+            <span class="tag">Veri Yönetimi</span>
+            <span class="tag">Dijital İş Süreçleri</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="beceriler">
+      <h2 class="section-title">Becerilerim</h2>
+
+      <div class="grid-3">
+        <div class="card">
+          <h3>E-Ticaret & Dijital</h3>
+          <ul>
+            <li>Dropshipping yönetimi</li>
+            <li>Dijital ürün satış stratejileri</li>
+            <li>Pazar ve rakip analizi</li>
+            <li>Stoksuz e-ticaret yönetimi</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Dijital Pazarlama</h3>
+          <ul>
+            <li>Reklam yönetimi</li>
+            <li>Dönüşüm oranı optimizasyonu</li>
+            <li>Performans takibi</li>
+            <li>Müşteri deneyimi yönetimi</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Teknik Beceriler</h3>
+          <ul>
+            <li>SQL veritabanı yönetimi</li>
+            <li>C# programlama</li>
+            <li>C++ programlama</li>
+            <li>Temel veri analizi</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="deneyim">
+      <h2 class="section-title">Profesyonel Deneyim</h2>
+
+      <div class="card">
+        <h3>Marka Kurucusu & E-Ticaret Geliştiricisi</h3>
+        <div class="experience-meta">
+          <span class="pill">Shopier - Dijital Ürün Mağazası</span>
+          <span class="pill">1,5 Yıl</span>
+        </div>
+
+        <ul>
+          <li>Stoksuz e-ticaret modeliyle dijital ürün satışı gerçekleştirdim.</li>
+          <li>Mağazanın kurulum, tasarım ve operasyon süreçlerini yönettim.</li>
+          <li>Ürün araştırması, hedef kitle analizi ve fiyatlandırma stratejileri geliştirdim.</li>
+          <li>Dijital pazarlama kampanyaları planladım ve optimize ettim.</li>
+          <li>Satış ve müşteri verilerini analiz ederek dönüşüm artırıcı iyileştirmeler yaptım.</li>
+          <li>Ödeme altyapıları, sipariş süreçleri ve müşteri destek operasyonlarını yönettim.</li>
+          <li>Küçük ölçekli ekip koordinasyonu sağlayarak görev dağılımı ve süreç takibi yaptım.</li>
+          <li>Marka konumlandırma ve sürdürülebilir gelir modeli oluşturma süreçlerinde aktif rol aldım.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="projeler">
+      <h2 class="section-title">Projelerim</h2>
+
+      <div class="grid-2">
+        <div class="card">
+          <div class="project">
+            <h3>Dijital Ürün Mağazası</h3>
+            <p>Shopier altyapısı üzerinden dijital ürün satışı, ürün konumlandırma ve sipariş operasyonu yönetimi.</p>
+            <div class="tag-list">
+              <span class="tag">E-Ticaret</span>
+              <span class="tag">Shopier</span>
+            </div>
+          </div>
+
+          <div class="project">
+            <h3>Ürün Araştırma & Analiz Süreci</h3>
+            <p>Pazar ve rakip analizine göre ürün fırsatlarını değerlendirmeye yönelik analiz süreci.</p>
+            <div class="tag-list">
+              <span class="tag">Pazar Analizi</span>
+              <span class="tag">Veri Analizi</span>
+            </div>
+          </div>
+
+          <div class="project">
+            <h3>Reklam Performans Takibi</h3>
+            <p>Kampanya sonuçlarını takip ederek satış performansını ve dönüşüm oranlarını iyileştirme süreci.</p>
+            <div class="tag-list">
+              <span class="tag">Dijital Pazarlama</span>
+              <span class="tag">CRO</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Yabancı Dil</h3>
+          <p><strong>İngilizce:</strong> C1 Seviyesi</p>
+          <p><strong>Almanca:</strong> A2 Seviyesi</p>
+
+          <br>
+
+          <h3>Kariyer Hedefim</h3>
+          <p>
+            Veri odaklı, teknoloji temelli ve ölçeklenebilir e-ticaret sistemleri geliştiren
+            kurumsal yapılarda uzmanlaşmak ve dijital satış süreçlerinin gelişimine katkı sağlamak.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="iletisim">
+      <h2 class="section-title">İletişim</h2>
+
+      <div class="grid-2">
+        <div class="card">
+          <div class="contact-list">
+            <div class="contact-item"><strong>E-posta:</strong> eminbekereci46@gmail.com</div>
+            <div class="contact-item"><strong>Telefon:</strong> +90 551 164 43 25</div>
+            <div class="contact-item"><strong>LinkedIn:</strong> Emin Bekereci</div>
+            <div class="contact-item"><strong>GitHub:</strong> minclaw</div>
+            <div class="contact-item"><strong>Adres:</strong> Meydan Mahallesi, 505. No/Sokak</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Kısa Özet</h3>
+          <p>
+            E-ticaret operasyonu, dijital pazarlama, temel veri analizi ve teknoloji tabanlı
+            iş süreçlerinde kendini geliştiren, sorumluluk bilinci yüksek ve analitik düşünen
+            bir Yönetim Bilişim Sistemleri öğrencisidir.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 Muhammed Emin Bekereci | Kişisel CV Web Sitesi
+  </footer>
+
+</body>
+</html>
